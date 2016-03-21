@@ -18,9 +18,8 @@
   "license": "MIT",
   "main": "./core/index",
   "scripts": {
-    "preinstall": "npm install semver && node -e \"require('./core/server/utils/startup-check.js').nodeVersion()\"",
-    "start": "node index",
-    "test": "grunt validate --verbose"
+    "sf": "forever stopall",
+    "forever": "NODE_ENV=production forever start index.js" 
   },
   "engines": {
     "node": "~0.10.0 || ~0.12.0 || ~4.2.0",
